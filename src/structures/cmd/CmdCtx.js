@@ -8,5 +8,7 @@ module.exports = class CmdCtx {
     this.member = options.message.member;
     this.command = options.command;
     this.args = options.args;
+    this.language = options.language;
+    this.t = options.client.language.i18next.getFixedT(options.language);
   };
 };

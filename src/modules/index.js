@@ -1,3 +1,4 @@
 module.exports = {  
-  Database: require("./Database")
+  Database: require("./Database"),
+  Language: require("./Language"),
 };

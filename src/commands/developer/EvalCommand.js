@@ -13,7 +13,7 @@ module.exports = class EvalCommand extends Cmd {
     this.ownerOnly = true;
   };
 
-  async run({ message, channel, guild, author, member, args }) {
+  async run({ message, channel, guild, author, member, args }, t) {
     let code = args.join(' ').replace(/^```(js|javascript ? \n )?|```$/gi, '')
 
     if(!code) return channel.send(`**${author.username}**, digite algo!`);

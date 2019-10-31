@@ -12,13 +12,14 @@ module.exports = class Message {
 
     const client_mention = message.guild ? message.guild.me.toString() : this.client.user.toString();
     const prefix = message.content.startsWith(client_mention) ? `${client_mention} ` : (message.content.startsWith(process.env.CLIENT_PREFIX) ? process.env.CLIENT_PREFIX : null);
-    
+    const language = 'pt-BR';
     if(prefix) {
       const args = message.content.slice(prefix.length).trim().split(' ');
       const name = args.shift();
       const command = this.client.commands.find(command => command.name === name || command.aliases.includes(name));
+      
       if(command) {
-        const context = new CmdCtx({ client: this.client, message, command, args });
+        const context = new CmdCtx({ client: this.client, message, command, args, language });
         return command._run(command, context);
       };
     };

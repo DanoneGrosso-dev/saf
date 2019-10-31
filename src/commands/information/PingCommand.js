@@ -8,7 +8,7 @@ module.exports = class PingCommand extends Cmd {
     this.aliases = ['pin'];
   };
 
-  async run({ channel }) {
-    channel.send(`**Ping**: **\`${await this.getPing()}\`**`)
+  async run({ channel }, t) {    
+    channel.send(t('commands:ping', { ms: await this.getPing() }))
   };
 };

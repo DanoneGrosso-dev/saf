@@ -12,7 +12,7 @@ module.exports = class Cmd extends CmdUtils {
     this.ownerOnly = false;
   };
 
-  async _run(command, context, { channel, author } = context) {
+  async _run(command, context, { channel, author, t } = context) {
     try{
       if(this.ownerOnly){
         if(!this.client.owner.includes(author.id)) {
@@ -20,7 +20,7 @@ module.exports = class Cmd extends CmdUtils {
         };
       };
 
-      return await command.run(context)
+      return await command.run(context, t)
     } catch (error) {
       return this.client.logError(error, 'RunCommand')      
     };
