@@ -13,4 +13,4 @@
 
 ## Sobre
 
-Oiin!! Meu nome é Saf! Sou um morcego que gosta de aventuras e diversão.
+Hiii!! My name is Saf! I am a bat who likes adventures and fun.

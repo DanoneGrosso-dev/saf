@@ -1,0 +1,21 @@
+{
+  "notEmoji": {
+    "bot": "Bot",
+    "image": "Imagens",
+    "utils": "Úteis",
+    "configuration": "Configurações",
+    "music": "Música", 
+    "fun": "Diversão",
+    "moderation": "Moderação"
+  },
+
+  "yesEmoji": {
+    "bot": "<:robot:615358391518494721> Bot",
+    "image": "<:image:630446814926995472> Imagens",
+    "utils": "<:support:615358391895719936> Úteis",
+    "configuration": "<:module:615353289189621797> Configurações",
+    "music": "<:music:615929370002849866> Música",
+    "fun": "<:fireworks:630242853318164480> Diversão",
+    "moderation": "<:policeman:630463518533091358> Moderação"
+  }
+}

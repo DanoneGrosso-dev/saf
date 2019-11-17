@@ -6,23 +6,37 @@ module.exports = class EvalCommand extends Cmd {
   constructor(name, client) {
     super(name, client);
 
-    this.name = "eval";
-    this.aliases = ["e", "ev"];
-
-    this.category = "developer";
-    this.ownerOnly = true;
+    this.name = 'eval';
+    this.aliases = ['e', 'ev'];
+    this.category = 'developer';    
+    this.usage = {
+      args: false,      
+      txt: 'None',
+      need: '{prefix}{cmd} {args}',
+    };
+    this.requirements = {
+      ownerOnly: true,
+      guildOnly: true
+    };
+    this.permissions = {
+      client: [],
+      user: []
+    };
   };
 
-  async run({ message, channel, guild, author, member, args }, t) {
+  async run({ message, channel, guild, author, member, mentions, args, language }, t) {
     let code = args.join(' ').replace(/^```(js|javascript ? \n )?|```$/gi, '')
 
-    if(!code) return channel.send(`**${author.username}**, digite algo!`);
+    if(!code) return channel.send(t('commands:eval.noArgs', {
+      emoji: this.client.getEmoji('error').all,
+      user: author.username,
+    }));
 
     try{
       let msg = await this._result(eval(code))
 
-      if (msg.length > 2000)
-      msg = 'Mensagem muito longa, veja o console'
+      // if (msg.length > 2000)
+      // msg = t('commands:eval.viewConsole')      
 
       channel.send(await this._clean(msg), { code: 'js' })
     } catch (error) {

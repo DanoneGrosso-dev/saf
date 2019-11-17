@@ -1,3 +1,78 @@
 {
-    "ping": "**Ping**: **`{{ms}}`**"
+  "ping": "{{emoji1}} **WebSocket**: **`{{latencyDiscord}}`**\n{{emoji2}} **Database**: **`{{latencyMongoose}}`**",
+  "eval": {
+    "noArgs": "{{emoji}} **{{user}}**, digite um código seu vagabundo!",
+    "viewConsole": "Mensagem muito longa, veja o console"
+  },
+  "configs": {
+    "ctx": "{{emoji}} Menu de módulos:",
+    "description": "Acesse meu [`paínel de controle online`]({{link}}) e obtenha uma experiencia incrível."
+  },
+  "play": {
+    "warning": "{{emoji}} **AVISO**: O modo `beta` está ativado caso o sistema de música apresentar problemas por favor contacte o desenvolvedor do bot, [clique aqui](https://discord.gg/85fsXSJ) para obter entrar no suporte.",
+    "noArgs": "{{emoji}} **{{user}}**, por favor insira o **link** ou o **nome** da música desejada!"
+  },
+  "bassboost": {
+    "true": "{{emoji}} O modo grave foi ligado!",
+    "false": "{{emoji}} O modo grave foi desligado!"
+  },
+  "nowPlaying": "{{emoji}} Tocando agora: `{{track}}`",
+  "help": {
+    "noCommand": "{{emoji}} **{{user}}**, lamento mais não contrei nenhum comando para `{{content}}`.",
+    "command": {
+      "aliases": "{{emoji}} **Alternativas**: {{cmdAliases}}",
+      "category": "{{emoji}} **Categoria**: {{cmdCategory}}",
+      "name": "{{emoji}} **Nome**: {{cmdName}}",
+      "description": "{{emoji}} **Descrição**: {{cmdDescription}}",
+      "clientPermissions": "{{emoji}} **Minhas Permissões**: {{cmdClientPermissions}}",
+      "userPermissions": "{{emoji}} **Permissões do Usuário**: {{cmdUserPermissions}}",
+      "usages": "{{emoji}} **Usos**: {{cmdUsages}}",
+      "guildOnly": "{{emoji}} **Responde DM**: {{cmdGuildOnly}}",
+      "usage": "{{emoji}} **Modo de uso**: {{cmdUsage}}",
+
+      "noUsage": "Nenhum modo",
+      "noDescription": "Nenhuma descrição.",
+      "noCategory": "Nenhuma Categoria",
+      "noAliases": "Nenhuma Alternativa.",
+      "noPermissions": "Nenhuma Permissão.",
+      "noUsages": "Nunca usado.",
+
+      "true": "Não",
+      "false": "Sim"
+    },
+    "description": "**Use `{{prefix}}` para cada comando**.\nCustumize meu prefixo, use: `{{prefix}}config`",
+    "footer": "Para mais informações use: {{prefix}}help [nome do comando]"
+  },
+  "botinfo": {
+    "authorSubName": "Safan",
+    "description": "Oiin **{{user}}**! Meu nome é **[`Saf`]({{url}}/invite)**! Sou um morcego que gosta de aventuras e diversão. Atualmente estou trabalhando em **{{guilds}}** servidores com **{{users}}** usuários enviando **{{commands}}** comandos em **{{channels}}** canais.",
+    "principalInformation": {
+      "title": "Informações **principais**:",
+      "developer": "{{emoji}} **Developer**: {{developer}}",
+      "upTime": "{{emoji}} **Tempo Online**: `{{uptime}}`",
+      "prefix": "{{emoji}} **Prefixo**: `{{prefix}}`",
+      "createdAt": "{{emoji}} **Fui criado em**: `{{data}}`"
+    },
+    "otherLinks": {
+      "title": "Outros **Links**:",
+      "invite": "{{emoji}} [`Convite`](https://discordapp.com/oauth2/authorize?client_id={{id}}&scope=bot&permissions={{permissions}})",
+      "dashboard": "{{emoji}} [`Dashboard`]({{url}})", 
+      "github": "{{emoji}} [`Repositório`](https://github.com/izaky/Saf)",
+      "support": "{{emoji}} [`Suporte`](https://discord.gg/85fsXSJ)"
+    }
+  },
+  "ban": {
+    "noArgs": "{{emoji}} **{{user}}**, por favor mencione ou diga o ID de um usuário.",
+    "topRole": "{{emoji}} **{{user}}**, o usuário inserido possui um cargo mais alto que o seu.",
+    "notBannable": "{{emoji}} **{{user}}**, não posso banir esse usuário, pois meu cargo e menor do que o dele.",
+    "notReason": "Não especificado.",
+    "banned": "{{emoji1}} O usuário **{{target}}** foi banido do servidor por **{{user}}**.\n{{emoji2}} Motivo: `{{reason}}`"
+  },
+  "kick": {
+    "noArgs": "{{emoji}} **{{user}}**, por favor mencione ou diga o ID de um usuário.",
+    "topRole": "{{emoji}} **{{user}}**, o usuário inserido possui um cargo mais alto que o seu.",
+    "notKickable": "{{emoji}} **{{user}}**, não posso expulsar esse usuário, pois meu cargo e menor do que o dele.",
+    "notReason": "Não especificado.",
+    "kicked": "{{emoji1}} O usuário **{{target}}** foi expulso do servidor por **{{user}}**.\n{{emoji2}} Motivo: `{{reason}}`"
+  }
 }

@@ -1,8 +1,17 @@
 const cmdStructure = require("./structures/cmd");
 
 module.exports = {
+  // Structure Command
   Cmd: cmdStructure.Cmd,
-  CmdCtx: cmdStructure.CmdCtx,
+  CmdCtx: cmdStructure.Ctx,
+  CmdManager: cmdStructure.Manager,
+  CmdUtils: cmdStructure.Utils,
+  CmdVerify: cmdStructure.Verify,
 
-  HTTP: require("./http/server")
+  // Structures
+  Listener: require("./structures/Listener"),
+  Embed: require("./structures/Embed"),  
+
+  // Utils
+  Constants: require("./utils/Constants")
 };

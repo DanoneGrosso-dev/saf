@@ -1,4 +1,7 @@
 module.exports = {
   Cmd: require("./Cmd"),
-  CmdCtx: require("./CmdCtx")
+  Ctx: require("./Ctx"),
+  Manager: require("./Manager"),
+  Utils: require("./Utils"),
+  Verify: require("./Verify"),
 };

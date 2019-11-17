@@ -3,9 +3,9 @@ const Fs = require("fs");
 const I18next = require('i18next');
 const TranslationBackend = require('i18next-node-fs-backend');
 
-module.exports = class LanguageModule {
+module.exports = class LanguageLoader {
   constructor(client) {
-    this.name = "LanguageModule";
+    this.name = "LanguageLoader";
     this.client = client;
     this.language = {
       i18next: I18next
@@ -15,7 +15,7 @@ module.exports = class LanguageModule {
   async load() { 
     this.client.language = this.language;
     return this.initializeLanguage().then(() => {
-      this.client.log('Imported Language!', this.name)
+      this.client.log('i18next initialized!', this.name)
     });
   };
 
@@ -27,9 +27,11 @@ module.exports = class LanguageModule {
           'categories',
           'errors',
           'permissions',
-          'events',          
+          'events',
+          'music',
+          'help'
         ],
-        preload: await LanguageModule.readdir(path),
+        preload: await LanguageLoader.readdir(path),
         fallbackLng: 'pt-BR',
         backend: {
           loadPath: `${path}/{{lng}}/{{ns}}.json`

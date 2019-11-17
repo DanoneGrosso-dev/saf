@@ -1,0 +1,11 @@
+{
+  "commands": {
+    "botinfo": "Shows some detailed information about me.",
+    "help": "Shows the list of commands and how they work.",
+    "ping": "See my skill in answering the commands.",
+    "eval": "Command used by Team.",
+    "ban": "Ban a member of this server.",
+    "kick": "Throws out a member of this server.",
+    "configs": "Shows server settings."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "notPermissions": "{{emoji}} **{{user}}**, não possuo permissões necessárias para `{{permissions}}` nesse canal de voz!",
+  "userNotInChannel": "{{emoji}} **{{user}}**, por favor conecte-se a um canal de voz!",
+  "memberInDiferentChannel": "{{emoji}} **{{user}}**, por favor conecte-se ao canal de voz que eu estou!",
+  "playingNow": "{{emoji}} Tocando agora: `{{track}}`",
+  "addedToQueue": "{{emoji}} Adicionei a música `{{track}}` a fila de reprodução.",
+  "notPlaying": "{{emoji}} **{{user}}**, não estou tocando nenhuma faixa neste momento.",
+  "skipped": "{{emoji}} Música pulada!",
+  "stopped": "{{emoji}} A lista de reprodução foi limpa e a música foi parada.",
+  "paused": "{{emoji}} **{{user}}**, a música está em pause."
+}

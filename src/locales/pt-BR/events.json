@@ -1,0 +1,19 @@
+{
+  "levelUp": "{{emoji}} **{{user}}**, você upou para o level: `{{level}}`.",
+  "clientMention": "{{emoji}} Oii! **{{user}}**, para ver meus comandos use: `{{prefix}}help`.",
+  "userBlacklist": "{{emoji}} **{{user}}**, lamento mais você foi proibido de usar meus comandos.",
+  "commandMaintenance": "{{emoji}} **{{user}}**, este comando se encontra em manuntenção.",
+  "clientMaintenance": "{{emoji}} **{{user}}**, desculpe mais meus sistema se encontra em manuntenção no momento.",
+  "message": {
+    "update": {
+      "description": {
+        "ctx": "{{emoji}} O usuário **[`{{user}} ({{userId}})`]({{webSite}})** acabou de **editar uma mensagem**.",
+        "urlMessage": "[{{emoji}}] ➜ **Mensagem URL**: [clique aqui para ir]({{linkMessage}})",
+        "oldMessage": "[{{emoji}}] ➜ **Mensagem Antiga**: `{{old}}`",
+        "newMessage": "[{{emoji}}] ➜ **Mensagem Atual**: `{{new}}`",
+        "channelMessage": "[{{emoji}}] ➜ **Canal**: {{channel}}"
+      },
+      "footer": "Status: Mensagem editada com sucesso."      
+    }
+  }
+}

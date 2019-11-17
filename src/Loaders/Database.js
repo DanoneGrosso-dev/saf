@@ -1,16 +1,15 @@
 const { MongoDB } = require("../database");
 
-module.exports = class DatabaseModule {
+module.exports = class DatabaseLoader {
   constructor(client) {
-    this.name = "DatabaseModule";
+    this.name = "DatabaseLoader";
     this.client = client;
     this.database = false;
   };
 
   async load() { 
     this.client.database = this.database;
-    this.initializeDatabase(MongoDB)        
-    this.client.log('Imported Database!', this.name)
+    this.initializeDatabase(MongoDB);  
   };
 
   initializeDatabase(DBWrapper, options = {}) {

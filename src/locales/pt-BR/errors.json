@@ -1,0 +1,17 @@
+{
+  "commandError": "{{emoji}} **{{user}}**, ocorreu um erro ao executar este comando!.\n```js\n{{type}}```",
+  "ownerOnly": "{{emoji}} **{{user}}**, este comando é exclusivo do meu criador.",
+  "guildOnly": "{{emoji}} **{{user}}**, você só pode executar este comando em servidores.",
+  "permissions": {
+    "client": {
+      "multiple": "{{emoji}} **{{user}}**, o meu cargo o precisa ter as seguintes permissões: `{{permission}}`, para tudo funcionar corretamente.",
+      "one": "{{emoji}} **{{user}}**, o meu cargo o precisa ter a seguinte permissão: `{{permission}}`, para tudo funcionar corretamente."
+    },
+    "user": {
+      "multiple": "{{emoji}} **{{user}}**, você precisa ter as seguintes permissões: `{{permission}}`, para tudo funcionar corretamente.",
+      "one": "{{emoji}} **{{user}}**, você precisar ter a seguinte permissão: `{{permission}}`, para tudo funcionar corretamente."
+    }
+  },
+  "clientPermission": "{{emoji}} **{{user}}**, o meu cargo o precisa ter a seguinte permissão(es): `{{permission}}`, para tudo funcionar corretamente.",
+  "userPermission": "{{emoji}} **{{user}}**, você não tem a seguinte permissão(es): `{{permission}}`."
+}
