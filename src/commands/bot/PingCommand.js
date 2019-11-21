@@ -5,7 +5,9 @@ module.exports = class PingCommand extends Cmd {
     super(name, client);
   
     this.name = 'ping';
-    this.aliases = ['pin'];
+    this.aliases = [
+      'pin'
+    ];
     this.category = 'bot';    
     this.usage = {
       args: false,      

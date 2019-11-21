@@ -5,7 +5,13 @@ module.exports = class HelpCommand extends Cmd {
     super(name, client);
   
     this.name = 'help'; 
-    this.aliases = ['h', 'cmds', 'commands', 'comandos', 'ajuda'];
+    this.aliases = [
+      'h',
+      'cmds',
+      'commands',
+      'comandos',
+      'ajuda'
+    ];
     this.category = 'bot';    
     this.usage = {
       args: true,      
@@ -139,6 +145,9 @@ module.exports = class HelpCommand extends Cmd {
         })
       ].join('\n'))
       .setThumbnail(this.client.user.avatarURL)                    
+      .setFooter(t('commands:help.command.footer', {
+        cmdName: name ? name : null
+      }))
     );
   }
 };

@@ -5,7 +5,9 @@ module.exports = class BassbootCommand extends Cmd {
     super(name, client);
   
     this.name = 'bassboot';
-    this.aliases = ['bb'];
+    this.aliases = [
+      'bb'
+    ];
     this.category = 'music';    
     this.usage = {
       args: false,      

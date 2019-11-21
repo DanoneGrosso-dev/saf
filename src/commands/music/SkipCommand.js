@@ -5,7 +5,10 @@ module.exports = class SkipCommand extends Cmd {
     super(name, client);
   
     this.name = 'skip';
-    this.aliases = ['pular', 'sk'];
+    this.aliases = [
+      'pular',
+      'sk'
+    ];
     this.category = 'music';    
     this.usage = {
       args: false,      

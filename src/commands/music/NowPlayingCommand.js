@@ -5,7 +5,10 @@ module.exports = class NowPlayingCommand extends Cmd {
     super(name, client);
   
     this.name = 'nowplaying';
-    this.aliases = ['tocandoagora', 'np'];
+    this.aliases = [
+      'tocandoagora',
+      'np'
+    ];
     this.category = 'music';    
     this.usage = {
       args: false,      

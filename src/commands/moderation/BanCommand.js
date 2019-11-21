@@ -5,7 +5,9 @@ module.exports = class BanCommand extends Cmd {
     super(name, client);
   
     this.name = 'ban';
-    this.aliases = ['banir'];
+    this.aliases = [
+      'banir'
+    ];
     this.category = 'moderation';    
     this.usage = {
       args: true,

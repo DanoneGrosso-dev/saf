@@ -5,7 +5,9 @@ module.exports = class KickCommand extends Cmd {
     super(name, client);
   
     this.name = 'kick';
-    this.aliases = ['expulsar'];
+    this.aliases = [
+      'expulsar'
+    ];
     this.category = 'moderation';    
     this.usage = {
       args: true,      

@@ -5,7 +5,13 @@ module.exports = class ConfigCommand extends Cmd {
     super(name, client);
   
     this.name = 'config';
-    this.aliases = ['cfg', 'cfgs', 'configs', 'settings', 'dashboard'];
+    this.aliases = [
+      'cfg',
+      'cfgs',
+      'configs',
+      'settings',
+      'dashboard'
+    ];
     this.category = 'configuration';    
     this.usage = {
       args: false,      

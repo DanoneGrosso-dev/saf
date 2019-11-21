@@ -5,7 +5,10 @@ module.exports = class StopCommand extends Cmd {
     super(name, client);
   
     this.name = 'stop';
-    this.aliases = ['parar', 'st'];
+    this.aliases = [
+      'parar',
+      'st'
+    ];
     this.category = 'music';    
     this.usage = {
       args: false,      

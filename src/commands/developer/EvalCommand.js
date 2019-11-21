@@ -7,7 +7,10 @@ module.exports = class EvalCommand extends Cmd {
     super(name, client);
 
     this.name = 'eval';
-    this.aliases = ['e', 'ev'];
+    this.aliases = [
+      'e',
+      'ev'
+    ];
     this.category = 'developer';    
     this.usage = {
       args: false,      

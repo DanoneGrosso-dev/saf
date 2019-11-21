@@ -1,16 +1,20 @@
 {
   "commands": {
+    "roleinfo": "Mostra informações do cargo.",
+    "channelinfo": "Mostra informções sobre o canal.",
+    "userinfo": "Mostra dados do usuário.",
+    "serverinfo": "Mostra informações sobre o servidor.",
     "botinfo": "Mostra algumas informações detalhadas sobre mim.",
     "help": "Mostra a lista de comandos e como eles funcionam.",
     "ping": "Veja minha lâtencia ao responder os comandos.",
     "eval": "Comando utilizado pela Team.",
     "ban": "Bane um membro deste servidor.",
     "kick": "Expulsa um membro deste servidor.",
-    "config": "Mostra as configurações do servidor.",
+    "config": "Menu de configurações online",
     "bassboot": "Ligue o batidão para estremecer o chão.",
     "nowplaying": "Veja música que está tocando agora.",
     "play": "Escute uma música enquanto toma aquele café gostoso.",
-    "skip": "Pule de música",
+    "skip": "Pule de música.",
     "stop": "Limpa a lista de reprodução e para de tocar."
   }
 }

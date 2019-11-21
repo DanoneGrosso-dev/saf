@@ -38,7 +38,8 @@
       "noUsages": "Nunca usado.",
 
       "true": "Não",
-      "false": "Sim"
+      "false": "Sim",
+      "footer": "Informações do comando: {{cmdName}}"
     },
     "description": "**Use `{{prefix}}` para cada comando**.\nCustumize meu prefixo, use: `{{prefix}}config`",
     "footer": "Para mais informações use: {{prefix}}help [nome do comando]"
@@ -74,5 +75,111 @@
     "notKickable": "{{emoji}} **{{user}}**, não posso expulsar esse usuário, pois meu cargo e menor do que o dele.",
     "notReason": "Não especificado.",
     "kicked": "{{emoji1}} O usuário **{{target}}** foi expulso do servidor por **{{user}}**.\n{{emoji2}} Motivo: `{{reason}}`"
+  },
+  "serverinfo": {
+    "channels": {
+      "category": "{{emoji}} **Categorias**: `{{categories}}`",
+      "size": "{{emoji}} **Total**: `{{size}}`",
+      "text": "{{emoji}} **Texto**: `{{texts}}`",
+      "voice": "{{emoji}} **Voz**: `{{voices}}`"
+    },
+    "createdAt": "{{emoji}} **Criado em**: {{created}}",
+    "emojis": "{{emoji}} **Emojis**: `{{emojis}}`",
+    "members": {
+      "ctx": "{{emoji}} **Membros**:",
+      "bots": "{{emoji}} **Bots**: `{{bots}}`",
+      "users": "{{emoji}} **Usuários**: `{{users}}`",
+      "size": "{{emoji}} **Total**: `{{size}}`"
+    },
+    "name": "{{emoji}} **Nome**: {{name}} `({{id}})`",
+    "owner": "{{emoji}} **Dono**: <@{{owner}}>",
+    "region": {
+      "amsterdam": "Amsterdã",
+      "brazil": "Brasil",
+      "ctx": "{{emoji}} **Região**: {{region}}",
+      "eu-central": "Europa Central",
+      "eu-west": "Europa Ocidental",
+      "frankfurt": "Frankfurt",
+      "hongkong": "Hong Kong",
+      "japan": "Japão",
+      "london": "Londres",
+      "russia": "Russia",
+      "singapore": "Singapura",
+      "sydney": "Sydney",
+      "us-central": "EUA Central",
+      "us-east": "EUA Oriental",
+      "us-south": "EUA Sul",
+      "us-west": "EUA Ocidental"
+    },
+    "roles": "{{emoji}} **Roles**: `{{roles}}`",
+    "status": "{{emoji}} **Status**: {{status}}",
+    "footer": "Informações do Servidor: {{guildName}}"
+  },
+  "userinfo": {
+    "bot": {
+      "ctx": "{{emoji}} **Bot**: {{bot}}",
+      "no": "Não",
+      "yes": "Sim"
+    },
+    "commandsUsed": "{{emoji}} **Comandos Usados**: `{{commands}}`",
+    "createdAt": "{{emoji}} **Conta criada em**: {{created}}",
+    "id": "{{emoji}} **ID**: `{{id}}`",
+    "joinedAt": "{{emoji}} **Entrou no servidor**: {{joined}}",
+    "name": "{{emoji}} **Nome**: {{name}}",
+    "nickName": {
+      "ctx": "{{emoji}} **Apelido**: {{nickName}}",
+      "none": "Nenhum apelido no servidor."
+    },
+    "presenceGame": {
+      "ctx": "{{emoji}} **Jogando**: {{presenceGame}}",
+      "none": "Jogando nada no momento."
+    },
+    "presenceStatus": {
+      "ctx": "{{emoji}} **Status**: {{presenceStatus}}",
+      "dnd": "Não Pertube",
+      "idle": "Ausente",
+      "offline": "Indisponível",
+      "online": "Disponível"
+    }
+  },
+  "channelinfo": {
+    "createdAt": "{{emoji}} **Criado em**: {{created}}",
+    "deleted": {
+      "ctx": "{{emoji}} **Deletado**: {{deleted}}",
+      "no": "Não",
+      "yes": "Sim"
+    },
+    "id": "{{emoji}} **ID**: `{{id}}`",
+    "name": "{{emoji}} **Nome**: {{name}}",
+    "nsfw": {
+      "ctx": "{{emoji}} **Conteúdo Adulto**: {{nsfw}}",
+      "no": "Não",
+      "yes": "Sim"
+    },
+    "position": "{{emoji}} **Posição**: `{{position}}`",
+    "topic": {
+      "ctx": "{{emoji}} **Tópico**: {{topic}}",
+      "noTopic": "Nenhum tópico definido."
+    }
+  },
+  "roleinfo": {
+    "color": "{{emoji}} **Cor Hexadecimal**: {{color}}",
+    "createdAt": "{{emoji}} **Criado em**: {{created}}",
+    "editable": {
+      "ctx": "{{emoji}} **Editavel**: {{ops}}",
+      "no": "Não",
+      "yes": "Sim"
+    },
+    "hoist": {
+      "ctx": "{{emoji}} **Destacado**: {{ops}}",
+      "no": "Não",
+      "yes": "Sim"
+    },
+    "id": "{{emoji}} **ID**: `{{id}}`",
+    "members": "{{emoji}} **Membros**: {{membersSize}}",
+    "name": "{{emoji}} **Nome**: {{name}}",
+    "noArgs": "{{emoji}} **{{user}}**, insira uma role válida.",
+    "noRole": "{{emoji}} **{{user}}**, nada encontrado para: `{{search}}`.",
+    "position": "{{emoji}} **Posição**: {{position}}"
   }
 }

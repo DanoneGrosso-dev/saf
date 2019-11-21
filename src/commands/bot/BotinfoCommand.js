@@ -7,7 +7,12 @@ module.exports = class BotinfoCommand extends Cmd {
     super(name, client);
   
     this.name = 'botinfo';
-    this.aliases = ['bi', 'bot', 'info', 'saf'];
+    this.aliases = [
+      'bi',
+      'bot',
+      'info',
+      'saf'
+    ];
     this.category = 'bot';    
     this.usage = {
       args: false,
