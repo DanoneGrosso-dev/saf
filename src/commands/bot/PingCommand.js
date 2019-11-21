@@ -22,12 +22,14 @@ module.exports = class PingCommand extends Cmd {
     };
   };
 
-  async run({ channel }, t) {      
-    channel.send( new Embed()
+  async run({ channel, message }, t) {        
+    await channel.send( new Embed()
       .setDescription(t('commands:ping', {
-        emoji1: this.client.getEmoji('discord').all,
+        emoji1: this.client.getEmoji('message').all,
+        latencyMessage: parseInt(new Date() - message.createdAt),
+        emoji2: this.client.getEmoji('discord').all,
         latencyDiscord: await this.getPingWebSocket(),
-        emoji2: this.client.getEmoji('server').all,
+        emoji3: this.client.getEmoji('server').all,
         latencyMongoose: await this.getPingMongoose(),
       }))      
     );

@@ -105,4 +105,29 @@ module.exports = class Listener {
       this.client.logError(error, 'EventCommandVerifyError');
     };
   };
+
+  async clientMention(message, language, prefix) {
+    const delay = new Set();
+    const mentions = [
+      `<@${this.client.user.id}>`,
+      `<@!${this.client.user.id}>`,
+    ];
+
+    if(!delay.has(message.author.id) && mentions) {
+      mentions
+        .find(mention => {
+          if(message.content === mention) {
+            delay.add(message.author.id)
+            setTimeout(function() {
+              delay.delete(message.author.id)
+            }, 10 * 1000)
+            message.channel.send(this.client.language.i18next.getFixedT(language)('events:clientMention', {
+              emoji: this.client.getEmoji('saf').all,
+              user: message.author.username,
+              prefix: prefix
+            }))
+          };
+        });
+    };
+  };
 };

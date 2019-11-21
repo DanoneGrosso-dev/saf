@@ -1,5 +1,5 @@
 {
-  "ping": "{{emoji1}} **WebSocket**: **`{{latencyDiscord}}`**\n{{emoji2}} **Database**: **`{{latencyMongoose}}`**",
+  "ping": "{{emoji1}} **Message**: **`{{latencyMessage}}`\n**{{emoji2}} **Discord API**: **`{{latencyDiscord}}`**\n{{emoji3}} **MongoDB**: **`{{latencyMongoose}}`**",
   "eval": {
     "noArgs": "{{emoji}} **{{user}}**, digite um código seu vagabundo!",
     "viewConsole": "Mensagem muito longa, veja o console"

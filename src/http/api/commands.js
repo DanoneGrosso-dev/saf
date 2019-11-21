@@ -6,11 +6,31 @@ module.exports = class CommandsApi {
 
   async register() {
     this.app.get('/api/commands', (req, res) => {
-      const t = this.client.language.i18next.getFixedT(req.query.language || process.env.DEFAULT_LANGUAGE);
-      
-      const validCommands = this.client.commands
-        .filter((cmd) => !(cmd.category === 'developer' ));
+      const t = this.client.language.i18next.getFixedT(req.query.language || process.env.DEFAULT_LANGUAGE);            
+      const prefix = process.env.DEFAULT_PREFIX;
+      const getUsage = (cmd, subcommand = false) => {
+        if(cmd.usage && !cmd.usage.args) {
+          if(subcommand) {
+            return `${prefix}${name} ${cmd.name}`;
+          } else {
+            return `${prefix}${cmd.name}`;
+          };
+        } else {
+          if(!cmd.usage) return false;
+          else {
+            if(subcommand) {
+              return `${prefix}${name} ${cmd.name} ${cmd.usage.need.replace(/{args}/gi, cmd.usage.txt)}\``
+            } else {
+              return `${cmd.usage.need
+                .replace(/{args}/gi, cmd.usage.txt)
+                .replace(/{prefix}/gi, prefix)
+                .replace(/{cmd}/gi, cmd.name)}`
+            };
+          };
+        };
+      };
 
+      const validCommands = this.client.commands.filter((cmd) => !(cmd.category === 'developer' ));
       const categories = validCommands
         .map(c => c.category)
         .filter((v, i, a) => a.indexOf(v) === i)
@@ -18,11 +38,16 @@ module.exports = class CommandsApi {
         .localeCompare(t(`categories:notEmoji.${b}`)))
         .map(category => ({          
           name: t(`categories:${category}`),
+          size: validCommands.filter((c) => c.category === category).size,
           commands: validCommands
             .filter(c => c.category === category)
             .sort((a, b) => a.name.localeCompare(b.name))
-            .map(c => c.name)
-            .join(', ')
+            .map(c => ({
+              name: c.name,
+              description: t(`help:commands.${c.name}`),
+              usage: getUsage(c) || t('commands:help.command.noUsage'),
+              aliases: c.aliases || t('commands:help.command.noAliases')
+            }))
         }));
 
       return res.status(200).json({ categories });

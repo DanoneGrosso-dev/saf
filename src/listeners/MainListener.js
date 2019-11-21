@@ -68,6 +68,8 @@ module.exports = class MainListener extends Listener {
           }).catch(this.client.logError)
         };
       };
+
+      this.clientMention(message, language, guildPrefix);
     };
   };
 };

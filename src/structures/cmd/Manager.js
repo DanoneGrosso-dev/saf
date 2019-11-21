@@ -2,6 +2,11 @@ module.exports = class Manager {
   constructor(client) {
     this.client = client;
   };
+
+  getPingMessage(message) {
+    const msg = parseInt(new Date() - message.createdAt);
+    return msg + 'ms';
+  }
     
   getPingWebSocket() {
     const websocket = parseInt(this.client.ping);

@@ -1,7 +1,7 @@
 const Dc = require("discord.js");
 const Fs = require("fs");
 
-const Loaders = require("./src/Loaders");
+const Loaders = require("./src/loaders");
 
 require("dotenv").config();
 require('moment-duration-format');
@@ -11,10 +11,10 @@ module.exports = class SafClient extends Dc.Client {
     super(options);
     
     this.logs = new (require('./src/structures/LogsChannel'))(this);
-    // this.commands = new Dc.Collection();        
+    this.commands = new Dc.Collection();        
 
     this.initializeLoaders();
-    // this.test('./src/commands');
+    this.initalizeCommands('./src/commands');
     this.initalizeListeners('./src/listeners');
   };
 
@@ -70,24 +70,6 @@ module.exports = class SafClient extends Dc.Client {
         if(!success && loader.critical) process.exit(1);
       };
     };
-  };
-
-  test(path) {
-    Fs.readdir(path, (err, files) => {
-      if(err) this.logError(err);
-      
-      files.forEach(file => {
-        let filePath = path + '/' + file;
-        if(file.endsWith('.js')) {
-          const Command = require(filePath);
-          const commandName = file.replace(/.js/g, '').toLowerCase();
-          const command = new Command(commandName, this);
-          return this.commands.set(commandName, command);
-        } else if (Fs.lstatSync(filePath).isDirectory()) {
-          this.test(filePath);
-        };
-      });
-    });
   };
 
   initalizeCommands(path) {
