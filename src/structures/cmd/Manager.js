@@ -11,14 +11,14 @@ module.exports = class Manager {
   getPingWebSocket() {
     const websocket = parseInt(this.client.ping);
     return websocket + 'ms';
-  };  
+  };    
 
   async getPingMongoose() {    
     const init = Date.now();
     await this.client.database.mongoose.connection.db.admin().ping();
     const mongoose = Date.now() - init;
 
-    return mongoose + 'ms';
+    return mongoose + 'ms';  
   };
 
   async getPrefix(guild) {

@@ -109,23 +109,7 @@ module.exports = class Utils extends Manager {
     };
   };
 
-  async getMentions(message, type, args, position) {
-    args = (Array.isArray(args) ? args : false)
-    
-    try {
-      if (args) {
-        let a = args[position]
-          a = args[position].replace(/(<|@|&|#|!|>)/g, '')
-        let b;
-          b = message.mentions[type].find(s => s.id === a)
-        return b
-      };
-    } catch(err) {
-      return false;
-    };
-  };
-
-  getCommand(cmdName) {
+  getCommand(cmdName) {    
     const cmd = this.client.commands.find((cmd) => cmd.name.toLowerCase() === cmdName.toLowerCase() || (cmd.aliases && cmd.aliases.includes(cmdName.toLowerCase())));
     return cmd;
   };

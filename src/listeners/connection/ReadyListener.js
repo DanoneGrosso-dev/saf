@@ -11,6 +11,6 @@ module.exports = class ReadyListener extends Listener {
   };
   
   async ON() {       
-    this.client.playerManager = new PlayerManager(this.client, JSON.parse(process.env.LAVALINK_NODES), { user: this.client.user.id, shards: 1 });
+    // this.client.playerManager = new PlayerManager(this.client, JSON.parse(process.env.LAVALINK_NODES), { user: this.client.user.id, shards: 1 });
   };
 };
